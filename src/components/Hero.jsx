@@ -1,4 +1,5 @@
 import Button from './buttons/button'
+import PillButton from './buttons/PillButton'
 import { FiArrowUpRight, FiArrowRight } from "react-icons/fi";
 
 const Hero = () => {
@@ -11,11 +12,11 @@ const Hero = () => {
           <div className="space-y-8">
             {/* Main Headline */}
             <h1 className="text-5xl lg:text-[4.2rem] font-medium text-black leading-tight">
-              Maximum profit <br />from advertising<br />on marketplaces
+              Maximum Profit<br />from Advertising<br />on Marketplaces
             </h1>
             
             {/* Description */}
-            <p className="text-xl text-gray-700 leading-relaxed max-w-lg">
+            <p className="text-xl text-black leading-relaxed max-w-lg">
               We help raise products to the top using<br />
               smart management and analytics
             </p>
@@ -23,15 +24,14 @@ const Hero = () => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                text="Learn more" 
-                styletype="secondary"
+                text="Learn More" 
+                styletype="learn-more"
                 onClickHandler={() => console.log("Learn more clicked")}
               />
-              <Button 
-                text="Start for free" 
-                styletype="start-free"
+              <PillButton 
+                text="Start for Free" 
                 icon={<FiArrowUpRight className="w-4 h-4" />}
-                onClickHandler={() => console.log("Start for free clicked")}
+                onClickHandler={() => console.log("Start for Free Clicked")}
               />
             </div>
           </div>
@@ -78,16 +78,16 @@ const Hero = () => {
               {/* Button Overlay - Bottom Right */}
               <div className="absolute bottom-6 right-6">
                 <Button 
-                  text="About company" 
-                  styletype="about-company"
-                  icon={<FiArrowRight className="w-3 h-3" />}
+                  text="About Company" 
+                  styletype="glassmorph"
+                  icon={<FiArrowRight className="w-[16px] h-[16px] rotate-315" />}
                   onClickHandler={() => console.log("About company clicked")}
                 />
               </div>
             </div>
 
             {/* Statistics Section */}
-            <div className="bg-gray-100 rounded-2xl p-8">
+            <div className="bg-[#F3F3F3] rounded-2xl p-8">
               <div className="flex justify-between">
                 
                 {/* First Statistic */}
