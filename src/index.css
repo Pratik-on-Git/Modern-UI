@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* Neue Haas Grotesk Display Font Family */
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-15XXThin-Trial.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-16XXThinItalic-Trial.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-25XThin-Trial.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-26XThinItalic-Trial.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-35Thin-Trial.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-36ThinItalic-Trial.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-45Light-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-46LightItalic-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-55Roman-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-56Italic-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-65Medium-Trial.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-66MediumItalic-Trial.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-75Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-76BoldItalic-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-95Black-Trial.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('./assets/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-96BlackItalic-Trial.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Global font family setup */
+* {
+  font-family: 'Neue Haas Grotesk Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
