@@ -1,16 +1,6 @@
 // Export all animation components for easy importing
 export { 
-  AnimatedText, 
-  StaggeredText, 
-  TypewriterText, 
-  MorphingText 
-} from './TextAnimations';
-
-export { 
-  GlitchText, 
-  LiquidText, 
   MagneticText, 
-  RevealText, 
   GradientText 
 } from './ModernTextEffects';
 
@@ -27,7 +17,5 @@ export {
 } from './MultiLineRevealText';
 
 export { 
-  WordMorphingText, 
-  GlitchMorphingText, 
-  LiquidMorphingText 
+  WordMorphingText
 } from './WordMorphingText';

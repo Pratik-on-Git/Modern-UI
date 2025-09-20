@@ -2,10 +2,9 @@ import Button from './buttons/button'
 import PillButton from './buttons/PillButton'
 import { FiArrowUpRight, FiArrowRight } from "react-icons/fi";
 import { SplitTextAnimation, AnimationController } from './animations/AnimationController';
-import { StaggeredText, TypewriterText } from './animations/TextAnimations';
-import { GlitchText, LiquidText, MagneticText, RevealText, GradientText } from './animations/ModernTextEffects';
+import { MagneticText, GradientText } from './animations/ModernTextEffects';
 import { WordByWordRevealText } from './animations/MultiLineRevealText';
-import { WordMorphingText, GlitchMorphingText, LiquidMorphingText } from './animations/WordMorphingText';
+import { WordMorphingText } from './animations/WordMorphingText';
 
 const Hero = () => {
   return (
