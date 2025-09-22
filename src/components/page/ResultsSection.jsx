@@ -1,6 +1,8 @@
 
 import { FiSearch, FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 import getButtonStyling from '../buttons/getButtonStyling';
+import { AnimationController, BasicRevealText } from '../animations';
+import { ModernSlideIn, ModernFadeIn } from '../animations';
 
 const ResultsSection = () => {
   return (
@@ -31,19 +33,21 @@ const ResultsSection = () => {
         </svg>
         {/* Main Headline */}
         <div className="text-center mb-16">
+          <ModernFadeIn delay={0.4}>
           <h2 className="text-5xl lg:text-6xl font-medium text-black mb-4">
             We work for you,<br/>not for the marketplace
           </h2>
           <p className="text-xl text-black">
             Our approach and the results we have achieved
           </p>
+          </ModernFadeIn>
         </div>
 
         {/* Cards Grid - 5x5 Layout */}
         <div className="grid grid-cols-5 grid-rows-5 gap-4 h-[600px]">
           
           {/* Card 1: Top Left Blue Gradient Card (2x2) - Custom SVG Shape */}
-          <div className="col-span-2 row-span-2 relative">
+          <ModernSlideIn direction="left" className="col-span-2 row-span-2 relative">
             <div className="relative overflow-hidden h-full">
               {/* Custom SVG background using provided path */}
               <svg
@@ -68,22 +72,22 @@ const ResultsSection = () => {
 
               {/* Content on top of SVG */}
               <div className="absolute left-0 right-0 bottom-0 flex justify-between items-end h-auto p-8 pb-7 z-10">
-                <div className="text-white max-w-md mb-2 font-light">
+                <ModernFadeIn delay={0.1} className="text-white max-w-md mb-2 font-light">
                   <p className="text-lg leading-relaxed">Reduced the CPM rate and<br/>secured a position in the top<br/>for hundreds of queries</p>
-                </div>
-                <div className="text-white text-right mb-2">
+                </ModernFadeIn>
+                <ModernFadeIn delay={0.2} className="text-white text-right mb-2">
                   <p className="text-4xl font-normal">The rate is<br/><span className="font-normal">2.8 lower</span></p>
-                </div>
+                </ModernFadeIn>
               </div>
             </div>
             {/* Circular Search Icon */}
             <div className="absolute -top-2 -right-[-10px] w-15 h-15 bg-[#f3f3f3] rounded-full flex items-center justify-center shadow-lg z-20">
               <FiSearch className="w-6 h-6 text-black" />
             </div>
-          </div>
+          </ModernSlideIn>
 
           {/* Card 2: Bottom Left Light Purple Card (2x3) */}
-          <div className="col-span-2 row-span-3 col-start-1 row-start-3 relative">
+          <ModernSlideIn direction="right" className="col-span-2 row-span-3 col-start-1 row-start-3 relative">
             <div className="relative rounded-2xl overflow-hidden h-full">
               {/* Gradient background */}
               <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-[#f8e5ff] to-[#e0deff]" />
@@ -103,18 +107,18 @@ const ResultsSection = () => {
 
               {/* Content at bottom */}
               <div className="absolute left-0 right-0 bottom-0 flex justify-between items-end h-auto p-8 pb-7 z-20">
-                <div className="text-black max-w-md mb-2 font-light">
+                <ModernFadeIn delay={0.1} className="text-black max-w-md mb-2 font-light">
                   <p className="text-2xl leading-relaxed">Experts prepared a card for<br/>promotion and launched an auto campaign<br/> through Advertising Management</p>
-                </div>
-                <div className="text-black text-right mb-2">
+                </ModernFadeIn>
+                <ModernFadeIn delay={0.2} className="text-black text-right mb-2">
                   <p className="text-5xl font-medium">Orders<br/><span className="font-medium">x4</span></p>
-                </div>
+                </ModernFadeIn>
               </div>
             </div>
-          </div>
+          </ModernSlideIn>
 
           {/* Card 3: Middle Right Light Purple Card (1x5) */}
-          <div className="row-span-5 col-start-3 row-start-1">
+          <ModernSlideIn direction="up" delay={0.5} className="row-span-5 col-start-3 row-start-1">
             <div className="relative bg-gradient-to-br from-[#F3f3f3] to-[#E0DEFF] rounded-2xl p-6 h-full overflow-hidden">
               {/* Background Pattern - Concentric Circles */}
               <div className="absolute inset-0 opacity-8">
@@ -140,10 +144,10 @@ const ResultsSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </ModernSlideIn>
 
           {/* Card 4: Far Right Video Background (2x5) */}
-          <div className="col-span-2 row-span-5 col-start-4 row-start-1">
+          <ModernSlideIn direction="right" delay={0.5} className="col-span-2 row-span-5 col-start-4 row-start-1">
             <div className="relative rounded-2xl overflow-hidden h-full">
               {/* Clipped video background */}
               <video
@@ -157,7 +161,7 @@ const ResultsSection = () => {
               />
               
             </div>
-          </div>
+          </ModernSlideIn>
         </div>
       </div>
     </section>

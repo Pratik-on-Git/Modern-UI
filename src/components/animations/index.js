@@ -1,3 +1,4 @@
+export { ModernSlideIn, ModernFadeIn } from './ModernSlideFadeIn';
 // Export all animation components for easy importing
 export { 
   MagneticText, 
