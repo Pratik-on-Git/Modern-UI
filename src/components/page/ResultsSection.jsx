@@ -104,10 +104,10 @@ const ResultsSection = () => {
               {/* Content at bottom */}
               <div className="absolute left-0 right-0 bottom-0 flex justify-between items-end h-auto p-8 pb-7 z-20">
                 <div className="text-black max-w-md mb-2 font-light">
-                  <p className="text-lg leading-relaxed">experts prepared a card for<br/>promotion and launched an auto<br/>campaign through Advertising Management</p>
+                  <p className="text-2xl leading-relaxed">Experts prepared a card for<br/>promotion and launched an auto campaign<br/> through Advertising Management</p>
                 </div>
                 <div className="text-black text-right mb-2">
-                  <p className="text-4xl font-normal">orders<br/><span className="font-normal">x4</span></p>
+                  <p className="text-5xl font-medium">Orders<br/><span className="font-medium">x4</span></p>
                 </div>
               </div>
             </div>
