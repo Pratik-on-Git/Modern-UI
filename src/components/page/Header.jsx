@@ -1,6 +1,6 @@
-import Button from './buttons/button'
+import Button from '../buttons/button'
 import { LuUser } from "react-icons/lu";
-import { BasicRevealText } from './animations';
+import { BasicRevealText } from '../animations';
 
 const Header = () => {
   return (

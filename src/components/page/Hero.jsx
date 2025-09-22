@@ -1,10 +1,10 @@
-import Button from './buttons/button'
-import PillButton from './buttons/PillButton'
+import Button from '../buttons/button'
+import PillButton from '../buttons/PillButton'
 import { FiArrowUpRight, FiArrowRight } from "react-icons/fi";
-import { SplitTextAnimation, AnimationController } from './animations/AnimationController';
-import { MagneticText, GradientText } from './animations/ModernTextEffects';
-import { WordByWordRevealText } from './animations/MultiLineRevealText';
-import { WordMorphingText } from './animations/WordMorphingText';
+import { SplitTextAnimation, AnimationController } from '../animations/AnimationController';
+import { MagneticText, GradientText } from '../animations/ModernTextEffects';
+import { WordByWordRevealText } from '../animations/MultiLineRevealText';
+import { WordMorphingText } from '../animations/WordMorphingText';
 
 const Hero = () => {
   return (

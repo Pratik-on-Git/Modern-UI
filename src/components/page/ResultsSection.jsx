@@ -1,10 +1,10 @@
 import React from 'react';
 import { FiSearch, FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
-import PillButton from './buttons/PillButton';
+import PillButton from '../buttons/PillButton';
 
 const ResultsSection = () => {
   return (
-    <section className=" px-8 py-16">
+    <section className=" px-2 py-16">
       <div className="max-w-[90rem] mx-auto">
         {/* SVG defs for reusable clip-paths */}
         <svg width="0" height="0" className="absolute">
@@ -118,11 +118,11 @@ const ResultsSection = () => {
           <div className="row-span-5 col-start-3 row-start-1">
             <div className="relative bg-gradient-to-br from-[#F3f3f3] to-[#E0DEFF] rounded-2xl p-6 h-full overflow-hidden">
               {/* Background Pattern - Concentric Circles */}
-              <div className="absolute inset-0 opacity-6">
-                <div className="absolute bottom-[50%] right-4 w-100 h-100 border-2 border-[#000] rounded-full"></div>
-                <div className="absolute bottom-[60%] right-8 w-80 h-80 border-2 border-[#000] rounded-full"></div>
-                <div className="absolute bottom-[70%] right-12 w-60 h-60 border-2 border-[#000] rounded-full"></div>
-                <div className="absolute bottom-[80%] right-16 w-40 h-40 border-2 border-[#000] rounded-full"></div>
+              <div className="absolute inset-0 opacity-8">
+                <div className="absolute bottom-[50%] right-4 w-100 h-100 border-2 border-[#352ce8] rounded-full"></div>
+                <div className="absolute bottom-[60%] right-8 w-80 h-80 border-2 border-[#352ce8] rounded-full"></div>
+                <div className="absolute bottom-[70%] right-12 w-60 h-60 border-2 border-[#352ce8] rounded-full"></div>
+                <div className="absolute bottom-[80%] right-16 w-40 h-40 border-2 border-[#352ce8] rounded-full"></div>
               </div>
               
               {/* Content */}

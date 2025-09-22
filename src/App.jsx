@@ -1,6 +1,6 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import ResultsSection from './components/ResultsSection'
+import Header from './components/page/Header'
+import Hero from './components/page/Hero'
+import ResultsSection from './components/page/ResultsSection'
 import './App.css'
 
 function App() {
