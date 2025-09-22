@@ -61,7 +61,7 @@ const Hero = () => {
               />
               <PillButton 
                 text="Start for Free" 
-                icon={<FiArrowUpRight className="w-4 h-4" />}
+                icon={<FiArrowUpRight className="w-4 h-4 " />}
                 onClickHandler={() => console.log("Start for Free Clicked")}
               />
             </div>
