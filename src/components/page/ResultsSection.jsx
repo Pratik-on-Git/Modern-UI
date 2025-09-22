@@ -1,6 +1,5 @@
-import React from 'react';
+
 import { FiSearch, FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
-import PillButton from '../buttons/PillButton';
 import getButtonStyling from '../buttons/getButtonStyling';
 
 const ResultsSection = () => {
@@ -56,10 +55,10 @@ const ResultsSection = () => {
                 style={{ zIndex: 1 }}
               >
                 <defs>
-                  <radialGradient id="card1Gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                    <stop offset="0%" stopColor="#60a5fa" />
-                    <stop offset="100%" stopColor="#352ce8" />
-                  </radialGradient>
+                  <linearGradient id="card1Gradient" gradientTransform="rotate(90)">
+                    <stop offset="0%" stopColor="#000000"/>
+                    <stop offset="80%" stopColor="#352ce8" />
+                  </linearGradient>
                 </defs>
                 <path
                   d="M435.382 0.878197C448.94 0.878197 457.567 18.6422 457.5 32.2003C457.458 40.7872 460.437 50.055 469.5 58.5C481.607 69.7813 496.183 70.9456 508.579 68.7975C521.04 66.6382 535.781 75.1018 535.781 87.7484V152.372V230C535.781 238.837 528.617 246 519.781 246H395.5H166H16C7.16344 246 0 238.837 0 230V152.372V16.8782C0 8.04163 7.16344 0.878197 16 0.878197H308.802H435.382Z"
@@ -85,38 +84,31 @@ const ResultsSection = () => {
 
           {/* Card 2: Bottom Left Light Purple Card (2x3) */}
           <div className="col-span-2 row-span-3 col-start-1 row-start-3 relative">
-            <div className="relative bg-gradient-to-r from-purple-100 to-white rounded-2xl p-6 h-full overflow-hidden">
-              {/* Background Pattern - Wavy Lines */}
-              <div className="absolute inset-0 opacity-30">
-                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                  <path d="M0,20 Q25,10 50,20 T100,20 L100,80 Q75,90 50,80 T0,80 Z" fill="url(#purpleGradient)" />
-                  <path d="M0,30 Q30,15 60,30 T100,30 L100,70 Q70,85 40,70 T0,70 Z" fill="url(#purpleGradient2)" />
-                  <defs>
-                    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#E9D5FF" />
-                      <stop offset="100%" stopColor="#F3E8FF" />
-                    </linearGradient>
-                    <linearGradient id="purpleGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#DDD6FE" />
-                      <stop offset="100%" stopColor="#E9D5FF" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+            <div className="relative rounded-2xl overflow-hidden h-full">
+              {/* Gradient background */}
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-[#f8e5ff] to-[#e0deff]" />
+
+              {/* Logo PNG background, top right, low opacity */}
+              <img
+                src="/logo/Icon-107.png"
+                alt="Logo background"
+                className="absolute right-50 w-128 h-128 object-contain opacity-5 z-10 pointer-events-none select-none"
+                draggable="false"
+              />
+
+              {/* Arrow Icon - Top Right */}
+              <div className="absolute top-6 right-6 w-15 h-15 bg-white rounded-full flex items-center justify-center shadow-lg z-20">
+                <FiArrowRight className="w-6 h-6 text-black" />
               </div>
-              
-              {/* Content */}
-              <div className="relative z-10 flex flex-col justify-between h-full">
-                <div className="text-black">
-                  <p className="text-sm leading-relaxed">experts prepared a card for promotion and launched an auto campaign through Advertising Management</p>
+
+              {/* Content at bottom */}
+              <div className="absolute left-0 right-0 bottom-0 flex justify-between items-end h-auto p-8 pb-7 z-20">
+                <div className="text-black max-w-md mb-2 font-light">
+                  <p className="text-lg leading-relaxed">experts prepared a card for<br/>promotion and launched an auto<br/>campaign through Advertising Management</p>
                 </div>
-                <div className="text-black text-right">
-                  <p className="text-2xl font-bold">orders x4</p>
+                <div className="text-black text-right mb-2">
+                  <p className="text-4xl font-normal">orders<br/><span className="font-normal">x4</span></p>
                 </div>
-              </div>
-              
-              {/* Arrow Icon */}
-              <div className="absolute -top-3 -right-3 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg z-20">
-                <FiArrowRight className="w-5 h-5 text-black" />
               </div>
             </div>
           </div>
