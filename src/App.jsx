@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import useGsapSmoothScroll from './components/animations/useGsapSmoothScroll';
 import Header from './components/page/Header'
 import Hero from './components/page/Hero'
@@ -7,18 +8,28 @@ import ModernLoader from './components/loader/ModernLoader';
 
 function App() {
   useGsapSmoothScroll();
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    // Wait for loader to finish before showing content
+    const loaderTimeout = setTimeout(() => setShowContent(true), 1800);
+    return () => clearTimeout(loaderTimeout);
+  }, []);
+
   return (
     <>
-      <ModernLoader />
-      <div className='p-8'>
-        <Header />
-        <div>
-          <Hero />
-          <ResultsSection />
+      {!showContent && <ModernLoader />}
+      {showContent && (
+        <div className='p-8'>
+          <Header />
+          <div>
+            <Hero />
+            <ResultsSection />
+          </div>
         </div>
-      </div>
+      )}
     </>
-  )
+  );
 }
 
 export default App

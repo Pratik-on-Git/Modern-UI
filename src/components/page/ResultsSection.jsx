@@ -1,7 +1,7 @@
 
 import { FiSearch, FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 import getButtonStyling from '../buttons/getButtonStyling';
-import { AnimationController, BasicRevealText } from '../animations';
+import AnimatedGradientSVG from '../animations/AnimatedGradientSVG';
 import { ModernSlideIn, ModernFadeIn } from '../animations';
 
 const ResultsSection = () => {
@@ -49,26 +49,13 @@ const ResultsSection = () => {
           {/* Card 1: Top Left Blue Gradient Card (2x2) - Custom SVG Shape */}
           <ModernSlideIn direction="left" className="col-span-2 row-span-2 relative">
             <div className="relative overflow-hidden h-full">
-              {/* Custom SVG background using provided path */}
-              <svg
-                viewBox="0 0 536 246"
-                width="100%"
-                height="100%"
-                className="absolute inset-0 w-full h-full"
-                preserveAspectRatio="none"
-                style={{ zIndex: 1 }}
-              >
-                <defs>
-                  <linearGradient id="card1Gradient" gradientTransform="rotate(90)">
-                    <stop offset="0%" stopColor="#000000"/>
-                    <stop offset="80%" stopColor="#352ce8" />
-                  </linearGradient>
-                </defs>
+              {/* Animated gradient background using AnimatedGradientSVG */}
+              <AnimatedGradientSVG gradientId="card1Gradient" colors={["#000000", "#352ce8"]} duration={3}>
                 <path
                   d="M435.382 0.878197C448.94 0.878197 457.567 18.6422 457.5 32.2003C457.458 40.7872 460.437 50.055 469.5 58.5C481.607 69.7813 496.183 70.9456 508.579 68.7975C521.04 66.6382 535.781 75.1018 535.781 87.7484V152.372V230C535.781 238.837 528.617 246 519.781 246H395.5H166H16C7.16344 246 0 238.837 0 230V152.372V16.8782C0 8.04163 7.16344 0.878197 16 0.878197H308.802H435.382Z"
                   fill="url(#card1Gradient)"
                 />
-              </svg>
+              </AnimatedGradientSVG>
 
               {/* Content on top of SVG */}
               <div className="absolute left-0 right-0 bottom-0 flex justify-between items-end h-auto p-8 pb-7 z-10">
