@@ -104,7 +104,7 @@ const Hero = () => {
                   <GradientText 
                     text="100K+"
                     className="text-5xl font-medium block"
-                    gradientColors={['#fff', '#352ce8', '#fff', '#352ce8']}
+                    gradientColors={['#fff', '#e0deff', '#fff', '#e0deff']}
                     animationSpeed={10}
                   />
                   <WordByWordRevealText 
