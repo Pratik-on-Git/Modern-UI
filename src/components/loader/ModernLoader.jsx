@@ -2,76 +2,38 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register GSAP plugin
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
-}
+gsap.registerPlugin(ScrollTrigger);
 
 const ModernLoader = () => {
-  const [progress, setProgress] = useState(0);
-  const iconRef = useRef(null);
-  const fillRef = useRef(null);
+  const leftCurtain = useRef(null);
+  const rightCurtain = useRef(null);
+  const logoRef = useRef(null);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    let fakeProgress = 0;
-    const interval = setInterval(() => {
-      fakeProgress += Math.random() * 10;
-      setProgress(Math.min(100, fakeProgress));
-      if (fakeProgress >= 100) clearInterval(interval);
-    }, 60);
-    return () => clearInterval(interval);
+    // Curtain split animation
+    const tl = gsap.timeline({
+      onComplete: () => {
+        setTimeout(() => setVisible(false), 400);
+      }
+    });
+    tl
+      .to(logoRef.current, { opacity: 1, scale: 1, duration: 0.6, ease: 'power2.out' })
+      .to(leftCurtain.current, { x: '-100%', duration: 0.8, ease: 'power3.inOut' }, '+=0.2')
+      .to(rightCurtain.current, { x: '100%', duration: 0.8, ease: 'power3.inOut' }, '<')
+      .to(logoRef.current, { opacity: 0, scale: 0.8, duration: 0.5, ease: 'power2.in' }, '-=0.4');
   }, []);
 
-  useEffect(() => {
-    if (fillRef.current) {
-      gsap.to(fillRef.current, {
-        strokeDashoffset: 314 - (314 * progress) / 100,
-        duration: 0.3,
-        ease: 'power2.out',
-      });
-    }
-  }, [progress]);
+  if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#f3f3f3]">
-      <div className="flex flex-col items-center">
-        <svg
-          ref={iconRef}
-          width={120}
-          height={120}
-          viewBox="0 0 120 120"
-          className="mb-6"
-        >
-          <circle
-            cx="60"
-            cy="60"
-            r="50"
-            stroke="#352ce8"
-            strokeWidth="8"
-            fill="none"
-            opacity="0.15"
-          />
-          <circle
-            ref={fillRef}
-            cx="60"
-            cy="60"
-            r="50"
-            stroke="#352ce8"
-            strokeWidth="8"
-            fill="none"
-            strokeDasharray="314"
-            strokeDashoffset="314"
-            style={{ transition: 'stroke-dashoffset 0.3s' }}
-          />
-          <image
-            href="/logo/Icon-107.png"
-            x="30"
-            y="30"
-            width="60"
-            height="60"
-            opacity="1"
-          />
-        </svg>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#f3f3f3]/10 backdrop-blur-md overflow-hidden">
+      {/* Curtains */}
+      <div ref={leftCurtain} className="absolute left-0 top-0 w-1/2 h-full bg-[#352ce8]" />
+      <div ref={rightCurtain} className="absolute right-0 top-0 w-1/2 h-full bg-[#352ce8]" />
+      {/* Logo */}
+      <div ref={logoRef} className="relative z-10 flex items-center justify-center">
+        <img src="/logo/Icon-107.png" alt="Logo" className="w-24 h-24 object-contain" />
       </div>
     </div>
   );
