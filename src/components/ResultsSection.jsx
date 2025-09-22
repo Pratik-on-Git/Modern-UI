@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiSearch, FiArrowRight } from 'react-icons/fi';
+import { FiSearch, FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
+import PillButton from './buttons/PillButton';
 
 const ResultsSection = () => {
   return (
@@ -115,24 +116,26 @@ const ResultsSection = () => {
 
           {/* Card 3: Middle Right Light Purple Card (1x5) */}
           <div className="row-span-5 col-start-3 row-start-1">
-            <div className="relative bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 h-full overflow-hidden">
+            <div className="relative bg-gradient-to-br from-[#F3f3f3] to-[#E0DEFF] rounded-2xl p-6 h-full overflow-hidden">
               {/* Background Pattern - Concentric Circles */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute bottom-4 right-4 w-20 h-20 border-2 border-purple-200 rounded-full"></div>
-                <div className="absolute bottom-8 right-8 w-16 h-16 border-2 border-purple-200 rounded-full"></div>
-                <div className="absolute bottom-12 right-12 w-12 h-12 border-2 border-purple-200 rounded-full"></div>
-                <div className="absolute bottom-16 right-16 w-8 h-8 border-2 border-purple-200 rounded-full"></div>
+              <div className="absolute inset-0 opacity-6">
+                <div className="absolute bottom-[50%] right-4 w-100 h-100 border-2 border-[#000] rounded-full"></div>
+                <div className="absolute bottom-[60%] right-8 w-80 h-80 border-2 border-[#000] rounded-full"></div>
+                <div className="absolute bottom-[70%] right-12 w-60 h-60 border-2 border-[#000] rounded-full"></div>
+                <div className="absolute bottom-[80%] right-16 w-40 h-40 border-2 border-[#000] rounded-full"></div>
               </div>
               
               {/* Content */}
               <div className="relative z-10 flex flex-col justify-between h-full">
                 <div>
-                  <button className="bg-purple-100 border border-purple-300 rounded-lg px-4 py-2 text-sm text-black mb-4 hover:bg-purple-200 transition-colors">
-                    Our approach →
-                  </button>
+                <PillButton 
+                text="Our Approach" 
+                icon={<FiArrowUpRight className="w-4 h-4" />}
+                onClickHandler={() => console.log("Our Approach Clicked")}
+              />
                 </div>
                 <div className="text-black">
-                  <p className="text-base leading-relaxed">Individual approach to each product for the greatest benefit for you</p>
+                  <p className="font-medium text-3xl leading-relaxed">Individual Approach to Each Product for the Greatest Benefit for you</p>
                 </div>
               </div>
             </div>
