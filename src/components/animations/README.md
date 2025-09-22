@@ -19,13 +19,16 @@ npm install gsap
 ## 🎯 Quick Start
 
 ```jsx
-import { SplitTextAnimation, GradientText, TypewriterText } from './components/animations';
+import { SplitTextAnimation, GradientText, TypewriterText, BasicRevealText } from './components/animations';
 
 function MyComponent() {
   return (
     <div>
+      <BasicRevealText delay={0}>
+        <h1>Hello World</h1>
+      </BasicRevealText>
       <SplitTextAnimation 
-        text="Hello World"
+        text="Split Text Animation"
         splitType="words"
         animationType="stagger"
       />
@@ -152,6 +155,55 @@ Animated gradient text effect.
   gradientColors={['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4']}
   animationSpeed={2}
 />
+```
+
+### BasicRevealText.jsx
+
+#### BasicRevealText
+Simple reveal animation from bottom with opacity fade-in. Perfect for headers, buttons, and any content that needs a clean reveal effect.
+
+```jsx
+<BasicRevealText 
+  delay={0.2}
+  duration={0.6}
+  ease="power2.out"
+>
+  <YourContent />
+</BasicRevealText>
+```
+
+**Props:**
+- `children`: Content to animate (any React element)
+- `delay`: Animation start delay in seconds (default: 0)
+- `duration`: Animation duration in seconds (default: 0.6)
+- `ease`: GSAP easing function (default: "power2.out")
+- `className`: Additional CSS classes
+
+**Usage Examples:**
+
+Header Elements:
+```jsx
+<BasicRevealText delay={0}>
+  <img src="/logo.png" alt="Logo" />
+</BasicRevealText>
+
+<BasicRevealText delay={0.1}>
+  <nav>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+  </nav>
+</BasicRevealText>
+
+<BasicRevealText delay={0.2}>
+  <button>Get Started</button>
+</BasicRevealText>
+```
+
+Text Content:
+```jsx
+<BasicRevealText delay={0.3} duration={0.8}>
+  <h1>Welcome to our website</h1>
+</BasicRevealText>
 ```
 
 ### AnimationController.jsx

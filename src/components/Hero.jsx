@@ -8,7 +8,7 @@ import { WordMorphingText } from './animations/WordMorphingText';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-white px-8 py-8">
+    <section className="min-h-screen px-0 py-8">
       <div className="max-w-[90rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           

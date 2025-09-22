@@ -19,3 +19,7 @@ export {
 export { 
   WordMorphingText
 } from './WordMorphingText';
+
+export { 
+  BasicRevealText
+} from './BasicRevealText';
