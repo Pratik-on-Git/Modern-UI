@@ -3,6 +3,7 @@ import useGsapSmoothScroll from './components/animations/useGsapSmoothScroll';
 import Header from './components/page/Header'
 import Hero from './components/page/Hero'
 import ResultsSection from './components/page/ResultsSection'
+import EarnMore from './components/page/EarnMore';
 import './App.css'
 import ModernLoader from './components/loader/ModernLoader';
 
@@ -25,6 +26,7 @@ function App() {
           <div>
             <Hero />
             <ResultsSection />
+            <EarnMore />
           </div>
         </div>
       )}
