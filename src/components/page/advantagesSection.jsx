@@ -41,7 +41,7 @@ const AdvantagesSection = () => (
     <div className="max-w-[1200px] w-full mx-auto flex flex-col items-center">
       <div className="flex w-full gap-16 justify-center">
         {/* Left */}
-        <AdvantagesReveal className="flex-1 bg-white rounded-[32px] shadow-lg p-8 flex flex-col items-center min-w-[35vw] relative overflow-hidden" variant="left">
+        <AdvantagesReveal className="flex-1 bg-white rounded-[32px] shadow-lg p-8 flex flex-col items-start min-w-[35vw] relative overflow-hidden" variant="left">
           {/* Subtle grid pattern background */}
           <div className="absolute inset-0 opacity-5">
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +110,7 @@ const AdvantagesSection = () => (
           </div>
         </AdvantagesReveal>
         {/* Right */}
-        <AdvantagesReveal className="flex-1 bg-gradient-to-br from-[#352ce8] to-[#847efc] rounded-[32px] shadow-lg p-8 pb-10 flex flex-col items-center min-w-[35vw] relative overflow-hidden">
+        <AdvantagesReveal className="flex-1 bg-gradient-to-br from-[#352ce8] to-[#847efc] rounded-[32px] shadow-lg p-8 pb-10 flex flex-col items-start min-w-[35vw] relative overflow-hidden">
           {/* Animated Circular Pattern Background */}
           <div className="absolute inset-0 opacity-30">
             <AdvantagesCircle className="top-0 -right-0 w-120 h-120" index={0} />
@@ -128,7 +128,7 @@ const AdvantagesSection = () => (
           </AdvantagesItem>
           
           <AdvantagesItem>
-            <h2 className="text-white text-5xl font-normal mb-6 w-full text-left">With us</h2>
+            <h2 className="text-white text-5xl font-normal mb-6 w-full">With us</h2>
           </AdvantagesItem>
           
           <div className="w-full space-y-6">
