@@ -24,7 +24,7 @@ const EarnMore = () => {
               loop
               muted
               playsInline
-              className="w-[250px] h-[75px] rounded-full object-cover mr-6"
+              className="w-[270px] h-[75px] rounded-full object-cover mr-6"
               style={{ boxShadow: "0 2px 24px rgba(0,0,0,0.07)" }}
             />
             <span className="text-black font-medium text-6xl">

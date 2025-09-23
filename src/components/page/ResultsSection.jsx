@@ -88,9 +88,9 @@ const ResultsSection = () => {
               />
 
               {/* Arrow Icon - Top Right */}
-              <div className="absolute top-6 right-6 w-15 h-15 bg-white rounded-full flex items-center justify-center shadow-lg z-20">
-                <FiArrowRight className="w-6 h-6 text-black" />
-              </div>
+                <div className="absolute top-6 right-6 w-15 h-15 bg-white rounded-full flex items-center justify-center shadow-lg z-20">
+                  <FiArrowRight className="w-6 h-6 text-black" />
+                </div>
 
               {/* Content at bottom */}
               <div className="absolute left-0 right-0 bottom-0 flex justify-between items-end h-auto p-8 pb-7 z-20">

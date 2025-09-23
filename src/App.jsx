@@ -4,6 +4,7 @@ import Header from './components/page/Header'
 import Hero from './components/page/Hero'
 import ResultsSection from './components/page/ResultsSection'
 import EarnMore from './components/page/EarnMore';
+import AdvantagesSection from './components/page/advantagesSection';
 import './App.css'
 import ModernLoader from './components/loader/ModernLoader';
 
@@ -27,6 +28,7 @@ function App() {
             <Hero />
             <ResultsSection />
             <EarnMore />
+            <AdvantagesSection />
           </div>
         </div>
       )}

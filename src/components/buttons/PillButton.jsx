@@ -17,7 +17,7 @@ const PillButton = ({ text, onClickHandler, icon, className = "" }) => {
       >
         <path
           d="M0 39C0 17.4609 17.4609 0 39 0H227.628C235.899 0 243.816 3.35827 249.564 9.30537V9.30537C261.556 21.7125 281.444 21.7125 293.436 9.30537V9.30537C299.184 3.35827 307.101 0 315.372 0H323C344.539 0 362 17.4609 362 39V39C362 60.5391 344.539 78 323 78H315.19C307.014 78 299.167 74.7817 293.345 69.041V69.041C281.231 57.0957 261.769 57.0957 249.655 69.041V69.041C243.833 74.7817 235.986 78 227.81 78H39C17.4609 78 0 60.5391 0 39V39Z"
-          className="transition-colors duration-400 fill-[#352ce8] group-hover:fill-[#000]"
+          className="transition-colors duration-400 fill-[#352ce8] group-hover:fill-[#000] group-hover:drop-shadow-lg"
         />
       </svg>
       <span className="relative z-10 w-full flex items-center justify-between px-[30px] py-0" style={{ width: '100%' }}>

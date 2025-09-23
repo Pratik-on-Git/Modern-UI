@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Line, Bar, Doughnut, Radar } from "react-chartjs-2";
-import Button from "../buttons/button";
 import getButtonStyling from "../buttons/getButtonStyling";
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, RadialLinearScale, Tooltip, Legend } from "chart.js";
 import { FaArrowRight } from "react-icons/fa";
@@ -36,7 +35,7 @@ const ToggleBox = () => {
       case "doughnut":
         return <Doughnut data={graphData} options={{
           plugins: { legend: { display: true, position: "right" } },
-          cutout: "70%",
+          cutout: "60%",
           responsive: true,
         }} />;
       case "radar":

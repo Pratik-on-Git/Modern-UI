@@ -10,10 +10,16 @@ function getButtonStyling(styletype) {
         return "bg-[#352ce8] text-white text-[15px] border-[#352ce8] border-1 rounded-full px-5 py-[4px] font-normal hover:bg-blue-700 transition-colors duration-400 flex items-center justify-center gap-1 shadow-lg";
       case "learn-more":
         return "bg-[#fff] text-black text-[15px] border-black border-1 rounded-full px-8 font-medium hover:bg-[#f3f3f3] transition-colors duration-400 h-12";
-       case "glassmorph":
+      case "glassmorph":
         return "bg-black/30 backdrop-blur-[8px] border border-white/30 text-white text-[15px] rounded-lg px-4 py-2 font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg";
-     default:
+      case "grey-white":
+        return "bg-white text-black/30 text-[14px] border-black/30 border-[1px] rounded-full px-5 py-[6px] font-medium hover:bg-gray-50 transition-colors duration-300";
+      case "blue-white":
+        return "bg-transparent text-[#fff] text-[14px] border-[#fff] border-[1.5px] rounded-full px-5 py-[6px] font-semibold hover:text-[#e0deff] border-[#e0deff] transition-colors duration-300";
+      default:
         return "text-gray-600 hover:text-black transition-colors duration-200 text-[15px] font-medium";
-       }}
+    }
   
-  export default getButtonStyling;
+}
+
+export default getButtonStyling;
