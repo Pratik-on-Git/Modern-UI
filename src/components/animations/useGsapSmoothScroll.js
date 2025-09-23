@@ -5,27 +5,31 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 /**
- * useGsapSmoothScroll - enables smooth scrolling effect using GSAP and ScrollTrigger
+ * useGsapSmoothScroll - enables smoother scrolling effect using GSAP and ScrollTrigger
  */
 export default function useGsapSmoothScroll() {
   useEffect(() => {
-    let scroll;
-    if (typeof window !== 'undefined') {
-      scroll = {
-        y: window.scrollY,
-        update: () => {
+    let ticking = false;
+
+    const smoothScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
           gsap.to(window, {
             scrollTo: { y: window.scrollY },
-            duration: 1,
-            ease: 'power2.out',
+            duration: 1.4, // increased duration for smoother effect
+            ease: 'power3.out', // smoother easing
             overwrite: 'auto',
           });
-        },
-      };
-      window.addEventListener('scroll', scroll.update);
-    }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', smoothScroll);
+
     return () => {
-      if (scroll) window.removeEventListener('scroll', scroll.update);
+      window.removeEventListener('scroll', smoothScroll);
     };
   }, []);
 }
