@@ -24,3 +24,9 @@ export {
 export { 
   BasicRevealText
 } from './BasicRevealText';
+
+export {
+  AdvantagesReveal,
+  AdvantagesItem,
+  AdvantagesCircle
+} from './AdvantagesReveal';
