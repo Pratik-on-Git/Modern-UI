@@ -2,6 +2,7 @@ import React from "react";
 import PillButton from "../buttons/PillButton";
 import { FiArrowUpRight } from "react-icons/fi";
 import { ModernFadeIn, ModernSlideIn } from "../animations";
+import ToggleBox from "../subcomponents/togglebox";
 
 const EarnMore = () => {
   return (
@@ -44,6 +45,7 @@ const EarnMore = () => {
             </ModernSlideIn>
         </div>
       </div>
+      <ToggleBox />
     </section>
   );
 };
