@@ -7,7 +7,7 @@ import EarnMore from './components/page/EarnMore';
 import AdvantagesSection from './components/page/advantagesSection';
 import './App.css'
 import ModernLoader from './components/loader/ModernLoader';
-
+import Cases from './components/page/Cases';
 function App() {
   useGsapSmoothScroll();
   const [showContent, setShowContent] = useState(false);
@@ -29,6 +29,7 @@ function App() {
             <ResultsSection />
             <EarnMore />
             <AdvantagesSection />
+            <Cases />
           </div>
         </div>
       )}

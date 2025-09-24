@@ -37,7 +37,7 @@ const Card = ({ icon, title, desc, crossed, diamond }) => (
 );
 
 const AdvantagesSection = () => (
-  <section className="w-full min-h-screen flex flex-col justify-center items-center bg-linear-65 from-[#f3f3f3] to-[#fff] py-12 relative">
+  <section className="w-full min-h-screen flex flex-col justify-center items-center bg-linear-65 from-[#f3f3f3] via-[#e0deff] to-[#fff] py-14 relative rounded-[32px]">
     <div className="max-w-[1200px] w-full mx-auto flex flex-col items-center">
       <div className="flex w-full gap-16 justify-center">
         {/* Left */}
