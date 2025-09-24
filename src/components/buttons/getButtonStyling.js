@@ -16,6 +16,8 @@ function getButtonStyling(styletype) {
         return "bg-white text-black/30 text-[14px] border-black/30 border-[1px] rounded-full px-5 py-[6px] font-medium hover:bg-gray-50 transition-colors duration-300";
       case "blue-white":
         return "bg-transparent text-[#fff] text-[14px] border-[#fff] border-[1.5px] rounded-full px-5 py-[6px] font-semibold hover:text-[#e0deff] border-[#e0deff] transition-colors duration-300";
+      case "white-small":
+        return "bg-transparent text-[#fff] text-[11px] border-[#fff] border-[1.5px] rounded-full px-5 py-[6px] font-medium hover:text-[#e0deff] border-[#e0deff] transition-colors duration-300";
       default:
         return "text-gray-600 hover:text-black transition-colors duration-200 text-[15px] font-medium";
     }
