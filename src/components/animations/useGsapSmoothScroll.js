@@ -13,12 +13,13 @@ export default function useGsapSmoothScroll() {
   useLayoutEffect(() => {
     // Create the smooth scroller
     const smoother = ScrollSmoother.create({
-      smooth: 2,               // seconds it takes to catch up to native scroll position
+      smooth: 1.5,               // seconds it takes to catch up to native scroll position
       effects: true,             // enables data-speed and data-lag attributes
       smoothTouch: 0.1,          // smooth scrolling on touch devices
       normalizeScroll: true,     // prevents address bar hiding/showing on mobile
       ignoreMobileResize: true,  // improves mobile performance
-      speed: 0.2,                  // multiplier for scroll speed
+      speed: 1,                  // multiplier for scroll speed
+      speedMax: 2,               // maximum speed when scrolling quickly
       ease: 'sine.out',          // easing function for the smooth scrolling
     });
 
