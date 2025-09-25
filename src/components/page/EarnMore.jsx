@@ -6,7 +6,7 @@ import ToggleBox from "../subcomponents/togglebox";
 
 const EarnMore = () => {
   return (
-    <section className="w-full flex flex-col pt-20 px-6">
+    <section className="w-full flex flex-col pt-16 px-6">
       <div className="flex justify-between w-full items-end">
         {/* Left side: Headline and image */}
         <div className="flex flex-col">

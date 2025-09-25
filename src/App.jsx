@@ -6,9 +6,11 @@ import ResultsSection from './components/page/ResultsSection'
 import EarnMore from './components/page/EarnMore';
 import AdvantagesSection from './components/page/advantagesSection';
 import './App.css'
+import Qna from './components/page/Qna';
 import Tarrif from './components/page/Tarrif';
 import ModernLoader from './components/loader/ModernLoader';
 import Cases from './components/page/Cases';
+import JoinCommunity from './components/page/JoinCommunity';
 function App() {
   useGsapSmoothScroll();
   const [showContent, setShowContent] = useState(false);
@@ -30,6 +32,8 @@ function App() {
             <AdvantagesSection />
             <Cases />
             <Tarrif />
+            <Qna />
+            <JoinCommunity />
           </div>
         </div>
       )}
