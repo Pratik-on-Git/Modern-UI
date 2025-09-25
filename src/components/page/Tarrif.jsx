@@ -63,7 +63,7 @@ const CardBgClip = ({ color, children }) => {
 const Tarrif = () => {
   return (
     <section className="py-16 bg-white">
-      <ModernFadeIn delay={0.4}>
+      <ModernFadeIn delay={0.2}>
         <h2 className="text-5xl text-center lg:text-6xl font-medium text-black mb-4">
             Tariff Plans
         </h2>
@@ -73,18 +73,18 @@ const Tarrif = () => {
       </ModernFadeIn>
       <div className="flex flex-row justify-between space-between">
         {/* Left Card */}
-        <ModernSlideIn delay={0.4}>
+        <ModernSlideIn delay={0.2}>
         <div className="flex-1 rounded-[40px]">
           <CardBgClip color="#eceaff">
             <div className="px-6 py-4 flex flex-col justify-center">
               <div>
                 <div className="flex items-center mb-10 mt-2">
-                  <BasicRevealText delay={0.4}>
-                  <span className="text-[2.5rem] font-light leading-none text-black mr-5">Advertising</span>
-                  <span className="rounded-full border border-black px-4 py-0 text-[2.2rem] font-light bg-white/80">10%</span>
+                  <BasicRevealText delay={0.3}>
+                  <span className="text-[2.5rem] font-medium leading-none text-black mr-2">Advertising</span>
+                  <span className="rounded-full border border-black px-2 py-0 text-[2.2rem] font-medium bg-transparent">10%</span>
                   </BasicRevealText>
                 </div>
-                <BasicRevealText delay={0.6}>
+                <BasicRevealText delay={0.5}>
                 <p className="text-[#757575] text-[1.1rem] mb-7 max-w-[90%]">
                   If you don't know your budget yet. Full access to “Advertising Management”: automatic control of bids and impressions.
                 </p>
@@ -111,7 +111,7 @@ const Tarrif = () => {
                         </div>
                         <div className="text-sm text-[#bcbcbc] mb-7">until you open an ad worth 10,000</div>
                     </div>
-                    <BasicRevealText delay={0.6}>
+                    <BasicRevealText delay={0.3}>
                         <div className="flex justify-end pt-[4rem] pr-[2rem]">
                         <PillButton
                         text="Start for Free"
@@ -129,18 +129,18 @@ const Tarrif = () => {
         </div>
         </ModernSlideIn>
         {/* Right Card */}
-        <ModernFadeIn delay={0.6}>
+        <ModernFadeIn delay={0.2}>
         <div className="flex-1 rounded-[40px] overflow-hidden">
           <CardBgClip color="#f6eaff">
             <div className="px-6 py-4 flex flex-col h-full justify-center">
               <div>
               <div className="flex items-center mb-10 mt-2">
                 <BasicRevealText delay={0.4}>
-                  <span className="text-[2.5rem] font-light leading-none text-black mr-5">Advertising</span>
-                  <span className="rounded-full border border-black px-4 py-0 text-[2.2rem] font-light bg-white/80">Fix</span>
+                  <span className="text-[2.5rem] font-medium leading-none text-black mr-5">Advertising</span>
+                  <span className="rounded-full border border-black px-4 py-0 text-[2.2rem] font-medium bg-white/80">Fix</span>
                 </BasicRevealText>
                 </div>
-                <BasicRevealText delay={0.6}>
+                <BasicRevealText delay={0.5}>
                 <p className="text-[#757575] text-[1.1rem] mb-7 max-w-[90%]">
                   If you know your advertising budget. Full access to “Advertising Management”: automatic control of bids and impressions.
                 </p>
@@ -167,7 +167,7 @@ const Tarrif = () => {
                         </div>
                         <div className="text-sm text-[#bcbcbc] mb-7">until you open an ad worth 10,000</div>
                     </div>
-                    <BasicRevealText delay={0.6}>
+                    <BasicRevealText delay={0.4}>
                     <div className="flex justify-end pt-[4rem] pr-[2rem]">
                         <PillButton
                         text="Start for Free"
