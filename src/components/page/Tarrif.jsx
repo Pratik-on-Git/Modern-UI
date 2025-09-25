@@ -1,14 +1,15 @@
 import React from 'react';
-import { ModernFadeIn } from '../animations';
+import { BasicRevealText, ModernFadeIn, ModernSlideIn } from '../animations';
 import PillButton from '../buttons/PillButton';
 import { FiArrowUpRight } from 'react-icons/fi';
+import { useState, useMemo } from 'react';
 
 // SVG background as a separate component for reuse
 const CardBgClip = ({ color, children }) => {
   // State to track hover
-  const [isHovered, setIsHovered] = React.useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   // Generate a unique ID for each pattern to avoid conflicts
-  const patternId = React.useMemo(() => `logo-pattern-${Math.random().toString(36).substr(2, 9)}`, []);
+  const patternId = useMemo(() => `logo-pattern-${Math.random().toString(36).substr(2, 9)}`, []);
 
   return (
     <div 
@@ -72,17 +73,22 @@ const Tarrif = () => {
       </ModernFadeIn>
       <div className="flex flex-row justify-between space-between">
         {/* Left Card */}
+        <ModernSlideIn delay={0.4}>
         <div className="flex-1 rounded-[40px]">
           <CardBgClip color="#eceaff">
             <div className="px-6 py-4 flex flex-col justify-center">
               <div>
                 <div className="flex items-center mb-10 mt-2">
+                  <BasicRevealText delay={0.4}>
                   <span className="text-[2.5rem] font-light leading-none text-black mr-5">Advertising</span>
                   <span className="rounded-full border border-black px-4 py-0 text-[2.2rem] font-light bg-white/80">10%</span>
+                  </BasicRevealText>
                 </div>
+                <BasicRevealText delay={0.6}>
                 <p className="text-[#757575] text-[1.1rem] mb-7 max-w-[90%]">
                   If you don't know your budget yet. Full access to “Advertising Management”: automatic control of bids and impressions.
                 </p>
+                </BasicRevealText>
                 <ul className="mb-8 space-y-2">
                   <li className="flex items-center text-base text-[#757575]">
                     <span className="w-5 h-5 rounded-full border border-[#bcbcbc] flex items-center justify-center mr-3 text-[#bcbcbc]">•</span>
@@ -105,6 +111,7 @@ const Tarrif = () => {
                         </div>
                         <div className="text-sm text-[#bcbcbc] mb-7">until you open an ad worth 10,000</div>
                     </div>
+                    <BasicRevealText delay={0.6}>
                         <div className="flex justify-end pt-[4rem] pr-[2rem]">
                         <PillButton
                         text="Start for Free"
@@ -113,24 +120,31 @@ const Tarrif = () => {
                         className="w-[230px] h-[88px] font-medium"
                       />
                         </div>
+                        </BasicRevealText>
                 </div>
               </div>
               
             </div>
           </CardBgClip>
         </div>
+        </ModernSlideIn>
         {/* Right Card */}
+        <ModernSlideIn delay={0.6}>
         <div className="flex-1 rounded-[40px] overflow-hidden">
           <CardBgClip color="#f6eaff">
             <div className="px-6 py-4 flex flex-col h-full justify-center">
               <div>
               <div className="flex items-center mb-10 mt-2">
+                <BasicRevealText delay={0.4}>
                   <span className="text-[2.5rem] font-light leading-none text-black mr-5">Advertising</span>
                   <span className="rounded-full border border-black px-4 py-0 text-[2.2rem] font-light bg-white/80">Fix</span>
+                </BasicRevealText>
                 </div>
+                <BasicRevealText delay={0.6}>
                 <p className="text-[#757575] text-[1.1rem] mb-7 max-w-[90%]">
                   If you know your advertising budget. Full access to “Advertising Management”: automatic control of bids and impressions.
                 </p>
+                </BasicRevealText>
                 <ul className="mb-8 space-y-2">
                   <li className="flex items-center text-base text-[#757575]">
                     <span className="w-5 h-5 rounded-full border border-[#bcbcbc] flex items-center justify-center mr-3 text-[#bcbcbc]">•</span>
@@ -153,6 +167,7 @@ const Tarrif = () => {
                         </div>
                         <div className="text-sm text-[#bcbcbc] mb-7">until you open an ad worth 10,000</div>
                     </div>
+                    <BasicRevealText delay={0.6}>
                     <div className="flex justify-end pt-[4rem] pr-[2rem]">
                         <PillButton
                         text="Start for Free"
@@ -161,11 +176,13 @@ const Tarrif = () => {
                         className="w-[230px] h-[88px] font-medium"
                       />
                     </div>
+                    </BasicRevealText>
                 </div>
             </div>
             </div>
           </CardBgClip>
         </div>
+        </ModernSlideIn>
       </div>
     </section>
   );
