@@ -129,7 +129,7 @@ const Tarrif = () => {
         </div>
         </ModernSlideIn>
         {/* Right Card */}
-        <ModernSlideIn delay={0.6}>
+        <ModernFadeIn delay={0.6}>
         <div className="flex-1 rounded-[40px] overflow-hidden">
           <CardBgClip color="#f6eaff">
             <div className="px-6 py-4 flex flex-col h-full justify-center">
@@ -182,7 +182,7 @@ const Tarrif = () => {
             </div>
           </CardBgClip>
         </div>
-        </ModernSlideIn>
+        </ModernFadeIn>
       </div>
     </section>
   );
