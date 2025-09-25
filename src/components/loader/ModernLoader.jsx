@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ModernLoader = () => {
+const ModernLoader = ({ onComplete }) => {
   const leftCurtain = useRef(null);
   const rightCurtain = useRef(null);
   const logoRef = useRef(null);
@@ -14,7 +14,10 @@ const ModernLoader = () => {
     // Curtain split animation
     const tl = gsap.timeline({
       onComplete: () => {
-        setTimeout(() => setVisible(false), 400);
+        setTimeout(() => {
+          setVisible(false);
+          if (onComplete) onComplete();
+        }, 400);
       }
     });
     tl
