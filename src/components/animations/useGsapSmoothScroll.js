@@ -16,7 +16,7 @@ export default function useGsapSmoothScroll() {
         window.requestAnimationFrame(() => {
           gsap.to(window, {
             scrollTo: { y: window.scrollY },
-            duration: 2, // increased duration for smoother effect
+            duration: 4, // increased duration for smoother effect
             ease: 'power2.out', // smoother easing
             overwrite: 'auto',
           });
