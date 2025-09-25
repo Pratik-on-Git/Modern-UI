@@ -10,7 +10,7 @@ const Cases = () => {
   return (
     <section className="w-full py-16 bg-white">
       <div className="text-center mb-16">
-            <ModernFadeIn delay={0.4}>
+            <ModernFadeIn delay={0.2}>
                 <h2 className="text-5xl lg:text-6xl font-medium text-black mb-4">
                   Cases
                 </h2>
@@ -60,7 +60,7 @@ const Cases = () => {
               </div>
               {/* Content */}
               <div className="flex-1 flex flex-col justify-end p-6 pb-20">
-                <ModernFadeIn delay={0.}>
+                <ModernFadeIn delay={0.1}>
                 <h3 className=" text-4xl font-medium text-white mb-2 drop-shadow-lg">{c.title}</h3>
                 {c.subtitle && (
                   <p className="text-base text-white mb-4 drop-shadow-md">{c.subtitle}</p>
