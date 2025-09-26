@@ -11,6 +11,8 @@ import Tarrif from './components/page/Tarrif';
 import ModernLoader from './components/loader/ModernLoader';
 import Cases from './components/page/Cases';
 import JoinCommunity from './components/page/JoinCommunity';
+import Footer from './components/page/Footer';
+
 function App() {
   useGsapSmoothScroll();
   const [showContent, setShowContent] = useState(false);
@@ -34,6 +36,7 @@ function App() {
             <Tarrif />
             <Qna />
             <JoinCommunity />
+            <Footer />
           </div>
         </div>
       )}

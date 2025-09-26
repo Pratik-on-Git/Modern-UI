@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ModernFadeIn, ModernSlideIn } from '../animations';
 import { FiHeart, FiArrowUpRight } from 'react-icons/fi';
+import PillButton from '../buttons/PillButton';
 import getButtonStyling from '../buttons/getButtonStyling';
 
 const JoinCommunity = () => {
@@ -43,7 +44,7 @@ const JoinCommunity = () => {
           </div>
           <ModernFadeIn delay={0.8}>
               {/* User avatars */}
-                <div className="flex absolute top-0 right-0 -space-x-2">
+                <div className="flex justify-end -space-x-2">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full border-2 border-white"></div>
                   <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-red-400 rounded-full border-2 border-white"></div>
                   <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full border-2 border-white"></div>
@@ -61,15 +62,15 @@ const JoinCommunity = () => {
             {/* Left Side - Text and Form */}
             <div className="text-white">
               <ModernFadeIn delay={0.2}>
-                <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Join our community
+                <h2 className="text-4xl lg:text-6xl font-normal mb-6 leading-tight">
+                  Join Our<br/>Community
                 </h2>
               </ModernFadeIn>
 
               <ModernFadeIn delay={0.4}>
-                <p className="text-lg lg:text-xl mb-8 leading-relaxed opacity-90 max-w-lg">
+                <p className="text-lg mb-8 leading-relaxed opacity-90 max-w-lg">
                   Be the first to receive notifications about updates, improvements and promotion tips.
-                  <br /><br />
+                  <br />
                   Once a month we give away a subscription to a free month of promotion among our subscribers.
                 </p>
               </ModernFadeIn>
@@ -83,7 +84,7 @@ const JoinCommunity = () => {
                       value={formData.fullName}
                       onChange={handleInputChange}
                       placeholder="Full Name"
-                      className="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/15 transition-all duration-200 backdrop-blur-sm"
+                      className="text-md w-full px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/15 transition-all duration-200 backdrop-blur-sm"
                     />
                   </div>
 
@@ -94,17 +95,16 @@ const JoinCommunity = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="Your Email"
-                      className="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/15 transition-all duration-200 backdrop-blur-sm"
+                      className="text-md w-full px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/15 transition-all duration-200 backdrop-blur-sm"
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full lg:w-auto px-8 py-4 bg-white text-black rounded-full font-medium hover:bg-gray-100 hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 group"
-                  >
-                    <FiHeart className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    Join Community
-                  </button>
+                  <PillButton
+                    text="Join Community"
+                    icon={<FiHeart className="w-4 h-4" />}
+                    onClickHandler={() => {}}
+                    className="w-full lg:w-[230px] h-[62px] text-lg font-medium"
+                  />
                 </form>
               </ModernSlideIn>
             </div>
@@ -113,12 +113,12 @@ const JoinCommunity = () => {
             
             <div className="flex flex-col items-center lg:items-end">
             <button
-                    className={getButtonStyling('learn-more') + " z-10"}
-                    type="button"
-                    onClick={() => console.log("Our Approach Clicked")}
-                  >
-                    Learn More About Company <FiArrowUpRight className="inline-block ml-2 w-4 h-4" />
-                  </button>
+              className={getButtonStyling('learn-more') + " z-10"}
+              type="button"
+              onClick={() => console.log("Our Approach Clicked")}
+            >
+              Learn More About Company <FiArrowUpRight className="inline-block ml-2 w-4 h-4" />
+            </button>
             </div>
           </div>
         </div>
