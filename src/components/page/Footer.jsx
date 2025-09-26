@@ -1,10 +1,12 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import PillButton from '../buttons/PillButton';
+import { ModernFadeIn } from '../animations';
 
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-t-3xl px-8 pt-28 pb-10">
+    <footer className="bg-white rounded-t-3xl px-8 pt-28">
+        <ModernFadeIn>
         <div className="flex flex-row justify-between items-center pb-10">
         <div className="flex flex-col mb-16">
           <h1 className="text-black font-medium text-6xl mb-[20px] flex items-center">
@@ -32,7 +34,8 @@ const Footer = () => {
         className="w-full lg:w-[220px] h-[58px] text-lg font-medium [&_.text-white_svg]:w-5 [&_.text-white_svg]:h-5 [&_.text-white]:ml-0"
         />
         </div>
-      <div className="mx-auto">
+        </ModernFadeIn>
+      <div className="pt-8 border-t-2 border-gray-300">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left - Copyright */}
           <div className="text-gray-400 text-sm order-2 md:order-1 mt-4 md:mt-0">
